@@ -2,6 +2,6 @@
 export default function handler(req, res) {
   return res.status(200).json({
     success: true,
-    message: "hello"
+    message: "this is working good"
   });
 }
