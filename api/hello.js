@@ -2,6 +2,6 @@
 export default function handler(req, res) {
   return res.status(200).json({
     success: true,
-    message: `this is working good wear ${res}`
+    message: `this is working good wear ${Object.values(res)}`
   });
 }
