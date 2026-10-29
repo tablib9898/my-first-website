@@ -12,13 +12,13 @@ export default async function handler(req, res) {
   );
 
    if(req.body?.name === "token"){
-   res = await fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
+   const res = await fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
         headers: {Authorization: `Bearer ${req.body?.token}`}
       }
     );
-      resJson = await res.json();
+      const resJson = await res.json();
    
-      return res.status(200).json({"messs":"hello"});
+      return res.status(200).json(resJson);
      
    }
    
